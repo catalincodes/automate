@@ -1,0 +1,59 @@
+1. True and False
+2. and, or, not 
+3. it's long... I know it by heart, skip
+4.
+
+(5 > 4) and (3 == 5)				False
+not (5 > 4)					False
+(5 > 4) or (3 == 5)				True
+not ((5 > 4) or (3 == 5))			False
+(True and True) and (True == False)		False
+(not False) or (not True)			True
+
+5. ==, !=, >, <, <=, >=
+
+6. == compares two values, = assigns the right hand side value to the left hand side variable
+
+7. A condition is an expression which evaluates to True or False. It is used to control program flow.
+
+8. 
+
+Block1:
+ print('eggs')
+    if spam > 5:
+        print('bacon')
+    else:
+        print('ham')
+    print('spam')
+
+Block2:
+    print('bacon')
+
+Block3:
+    print('ham')i
+
+9: 
+
+if(spam == 1): print('Hello')
+elif(spam ==2): print('Howdy')
+else: print('Greetings')
+
+10: Ctrl-C, Ctrl-D, Ctrl-Break
+
+11: break exits a code block in a flow completely and move to the next section
+    continue, exist the code block and starts a new iteration of the code block
+
+12: range(10) - range 0 to 9
+    range(0, 10) - range that starts at 0 and ends at 9
+    range(0, 10, 1) - range that starts at 0 and ends at 9, with 1-step
+
+13: 
+for(i in range(1,11): print(i)
+
+i=1
+while (i<11):
+    print(i)
+    i=i+1
+
+14: spam.bacon()
+
