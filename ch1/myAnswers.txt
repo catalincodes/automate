@@ -1,0 +1,20 @@
+1. operators: *, -, /, +
+   values: 'hello', -88.8, 5
+
+2. spam is variable, while 'spam' is a string
+
+3. integer, string, float
+
+4. values and operators. expression are used to evaluate or reduce to a value.
+
+5. An expression is a mix of one or more values and operators. The result of an expression is always a value. A statement may or may not return a value and it does not need to have either values or operators. 
+
+6. 20.
+
+7. 'spamspamspam'
+
+8. You cannot start a variable with a number.
+
+9. (int), (float) and (str)
+
+10. You need to cast 99 to a string like so: int(99)
