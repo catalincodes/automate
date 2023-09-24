@@ -3,7 +3,9 @@
 `len(string/list)` - number of elements in an array
 
 str(someVariable)   -->-\                              /--> a string
+
 int(someVariable)   -->-||---> Cast a variable into ->-|--> an int 
+
 float(someVariable) -->-/                              \--> a float
 
 if / elif / else - `else if` looks weird - I know
