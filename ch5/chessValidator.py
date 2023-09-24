@@ -46,9 +46,33 @@ def getPiecesByColor(color, piecesList):
 
     return resultList
 
+def validateNumChessPiecesOfType(pieces, pieceType, maxPieces):
+    filteredPieces = filter(lambda p:p[1:] == pieceType, pieces)
+    specificTypePieces = list(filteredPieces)
+    if (len(specificTypePieces) > maxPieces): return False
+
+    return True
+
 def validateChessPieces(pieces):
     if (len(pieces) > 16): return False
-    if (len(list(filter(lambda p: p[1:] == 'pawn', pieces))) > 8): return False
+
+    # Validates having only 8 pawns
+    if (validateNumChessPiecesOfType(pieces, 'pawn', 8) is False): return False
+
+    # Validates having only 2 rooks
+    if (validateNumChessPiecesOfType(pieces, 'rook', 2) is False): return False
+
+    # Validates having only 2 knights
+    if (validateNumChessPiecesOfType(pieces, 'knight', 2) is False): return False
+
+    # Validates having only 2 bishops
+    if (validateNumChessPiecesOfType(pieces, 'bishop', 2) is False): return False
+
+    # Validates having only 1 queen
+    if (validateNumChessPiecesOfType(pieces, 'queen', 1) is False): return False
+
+    # Validates having only 1 king
+    if (validateNumChessPiecesOfType(pieces, 'king', 1) is False): return False
 
     return True
 
@@ -61,7 +85,6 @@ def isValidChessBoard(board):
     pieces = list(board.values())
     # Validate Values
     
-    print(pieces)
     if (validateValues(pieces)) is False: return False
 
     for (index, item) in enumerate(pieces):
@@ -70,25 +93,9 @@ def isValidChessBoard(board):
     whitePieces = getPiecesByColor('white', pieces)
     blackPieces = getPiecesByColor('black', pieces)
     
-    print('white pieces: ', end='')
-    for (index, item) in enumerate(whitePieces):
-        print(item, end=', ')
-
-    print('\nblack pieces: ', end='')
-    for (index, item) in enumerate(blackPieces):
-        print(item, end=', ')
-
-    print('\n')
-
     if ( validateChessPieces(whitePieces) is False): return False
-    #validate pieces
-        #validate total 16 pieces
-        #validate max 8 pawns
-        #validate max 2 knights
-        #validate max 2 bishops
-        #validate max 2 rooks
-        #validate one queen
-        #validate one king
+    if ( validateChessPieces(blackPieces) is False): return False
+    
     return True
 
 board = {
@@ -101,6 +108,31 @@ board = {
         '1g':'wpawn',
         '1h':'wpawn',
         '2a':'wrook',
-        '2b':'bpawn'
+        '2b':'wrook',
+        '2c':'wknight',
+        '2d':'wknight',
+        '2e':'wbishop',
+        '2f':'wbishop',
+        '2g':'wqueen',
+        '2h':'wking',
+        '3a':'bpawn',
+        '3b':'bpawn',
+        '3c':'bpawn',
+        '3d':'bpawn',
+        '3e':'bpawn',
+        '3f':'bpawn',
+        '3g':'bpawn',
+        '3h':'bpawn',
+        '4a':'brook',
+        '4b':'brook',
+        '4c':'bknight',
+        '4d':'bknight',
+        '4e':'bbishop',
+        '4f':'bbishop',
+        '4g':'bqueen', 
+        '4h':'bking'
         }
-print(isValidChessBoard(board))
+
+result = isValidChessBoard(board)
+if (result is True): print('Valid chess board!')
+else: print('Not a valid chess board!')
