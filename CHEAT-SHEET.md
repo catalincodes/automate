@@ -54,6 +54,56 @@
 
 `for k,v in array.items():` - gives us key,value pairs to work with
 
-`dict.get('key', defaultValue)` - gets the value for the 'key' or a defaultValue if does not exist
+`dict.get('key', defaultValue)` - gets the value for the 'key' or a defaultValue if 'key' does not exist
 `dict.setDefault('key', defaultValue)` - if there is no value, it sets it to the default value else it leaves it alone
 
+`r('c:\timey-wimey)` - raw string `c:\timey-wimey`, without the r in front, `\t` gets interpreted as a tab
+
+```python
+"""This is how
+you make multiline comments
+in Python
+"""
+```
+`in` and `not in` - you can use `in` and `not in` with strings to find if a substring is present
+
+`f('2+3 is {2+3}')` - This is called an f-string. It's basic string interpolation.
+
+`upper(), lower()` - convert a string to uppercase or lowercase, respectively
+
+`isupper(), islower()` - returns true if all characters in a string are uppercase or lowercase, respectively
+
+`isalpha()` - is it a non-blank string made of letters (no numbers)
+
+`isalnum()` - is it a non-blank string made of letters and numbers (alphanumeric)
+
+`isdecimal()` - is it a non-blank string made of numbers (no letters)
+
+`isspace()` - is it a non-blank string made of spaces, tabs and newlines
+
+`istitle()` - is it a non-blank string with title case: `Such As This 123 Title`
+
+`startswith(arg), endswith(arg)` - returns true if it stars or ends with `arg`
+
+`val.join(listArg)` - Used like : `', '.join(['rats', 'dogs', 'cats'])` - this will result in `'rats, dogs, cats'
+
+`val.split()` - Commonly used when parsing a file it returns a list of strings
+```python
+'My name is Simon'.split()
+#['My','name','is','Simon']
+```
+One can also do `.split('\n')` if reading a file to split the file into an array of text rows.
+
+`before, sep, after = 'Hello, world!'.partition(' ')` will result in `before` containing `'Hello,'` and `after` containing `'world!'`
+
+`rjust(val), ljust(val), center(val)` - justifies to the left or right or center a text within the number of spaces passed as an argument
+
+`strip(), rstrip(), lstrip()` - remove whitespaces from sides, right-side or left-side of a string
+
+If you pass a series of characters in a string as parameters it will remove them as well.
+
+`ord(), chr()` - convert characters to and from their unicode value.
+
+`pyperclip.copy(arg)` - copies argument into the clipboard
+
+`var = pyperclip.paste()` - retrieves clipboard string for storing
